@@ -38,6 +38,7 @@ class GroceryRVAdapter (var list: List<GroceryItems>,
         holder.quantityTV.text = list.get(position).itemQuantity.toString()
         holder.rateTV.text="Rs. "+list.get(position).itemPrice.toString()
         val itemTotal :Int = list.get(position).itemPrice * list.get(position).itemQuantity
+        holder.amountTV.text = "Rs. "+itemTotal.toString()
         holder.deleteIV.setOnClickListener {
             groceryItemClickInterface.onItemClick(list.get(position))
         }

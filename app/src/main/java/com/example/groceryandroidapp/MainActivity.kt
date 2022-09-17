@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity() ,GroceryRVAdapter.GroceryItemClickInter
         }
         addBtn.setOnClickListener {
             val itemName : String =itemEdt.text.toString()
-            val itemPrice : String =itemEdt.text.toString()
-            val itemQuantity : String =itemEdt.text.toString()
+            val itemPrice : String =itemPriceEdt.text.toString()
+            val itemQuantity : String =itemQuantityEdt.text.toString()
             val qty: Int = itemQuantity.toInt()
             val pr : Int = itemPrice.toInt()
             if(itemName.isNotEmpty() && itemPrice.isNotEmpty() && itemQuantity.isNotEmpty()){
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() ,GroceryRVAdapter.GroceryItemClickInter
     }
 
     override fun onItemClick(groceryItems: GroceryItems) {
-    groceryViewModal.delete(groceryItems)
+        groceryViewModal.delete(groceryItems)
         groceryRVAdapter.notifyDataSetChanged()
         Toast.makeText(applicationContext,"Item Deleted.. ",Toast.LENGTH_SHORT).show()
     }
