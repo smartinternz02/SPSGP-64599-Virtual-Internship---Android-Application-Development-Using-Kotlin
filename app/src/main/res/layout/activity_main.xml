@@ -10,7 +10,8 @@
     <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/idRVItems"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+        tools:listitem="@layout/grovery_rv_item"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABAdd"
